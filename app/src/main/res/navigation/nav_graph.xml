@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/appetizerFragment2">
+    <fragment
+        android:id="@+id/appetizerFragment2"
+        android:name="com.example.foodorderingapp.view.fragments.AppetizerFragment"
+        android:label="fragment_appetizer"
+        tools:layout="@layout/fragment_appetizer" >
+        <action
+            android:id="@+id/action_appetizerFragment2_to_mainDishFragment2"
+            app:destination="@id/mainDishFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainDishFragment2"
+        android:name="com.example.foodorderingapp.view.fragments.MainDishFragment"
+        android:label="fragment_main_dish"
+        tools:layout="@layout/fragment_main_dish" >
+        <action
+            android:id="@+id/action_mainDishFragment2_to_dessertFragment2"
+            app:destination="@id/dessertFragment2" />
+        <action
+            android:id="@+id/action_mainDishFragment2_to_appetizerFragment2"
+            app:destination="@id/appetizerFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/dessertFragment2"
+        android:name="com.example.foodorderingapp.view.fragments.DessertFragment"
+        android:label="fragment_dessert"
+        tools:layout="@layout/fragment_dessert" >
+        <action
+            android:id="@+id/action_dessertFragment2_to_resultFragment2"
+            app:destination="@id/resultFragment2" />
+        <action
+            android:id="@+id/action_dessertFragment2_to_mainDishFragment2"
+            app:destination="@id/mainDishFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment2"
+        android:name="com.example.foodorderingapp.view.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment2_to_appetizerFragment2"
+            app:destination="@id/appetizerFragment2" />
+        <action
+            android:id="@+id/action_resultFragment2_to_dessertFragment2"
+            app:destination="@id/dessertFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>
